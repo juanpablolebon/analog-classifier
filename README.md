@@ -1,6 +1,6 @@
 # Analog Classifier
 
-A neural network that discerns images taken with an analog camera to images taken with a digital camera
+A neural network that discerns images taken with an analog camera from images taken with a digital camera
 
 ## Background
 The “film look” is a term thrown around fairly often by photography and cinema enthusiasts. It is employed as a rejection of the comparatively clean and accurate image rendition of digital cameras, and an embrace of the stylized (and so less accurate) interpretation yielded by film stocks.
