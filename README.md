@@ -1,6 +1,6 @@
 # Analog Classifier
 
-A neural network that discerns images taken with an analog camera from images taken with a digital camera
+A neural network that discerns images taken with an analog camera to images taken with a digital camera
 
 ## Background
 The “film look” is a term thrown around fairly often by photography and cinema enthusiasts. It is employed as a rejection of the comparatively clean and accurate image rendition of digital cameras, and an embrace of the stylized (and so less accurate) interpretation yielded by film stocks.
@@ -60,6 +60,11 @@ Just for a bit of context, FGSM is a tool used to construct data that a model wi
 
 Constructing a normal dataframe of grids mapped to rows (as usual), and adding a perturbed dataframe created via FGSM with an epsilon of smaller than 1 barely made a dent on the accuracy and confidence of this model. Moreover, ridiculous epsilon values of 1000 were not enough to change the model’s prediction at times. At worst it decreased the model’s confidence in its prediction from, say, 90% to 30%.
 
+In fact, several predictions on digital images saw their confidence _increased_ after FGSM noise was added.
+
+## References
+
+[Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)
 
 
 
