@@ -12,6 +12,8 @@
 
 ## Analog Classifier
 
+![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Yosemite.png)
+
 A neural network that discerns images taken with an analog camera to images taken with a digital camera
 
 ## 1. Background
@@ -34,13 +36,13 @@ Film grain is widely accepted to be more desirable than digital noise: it’s sm
 
 For all the debate there is about digital vs film, a lot of the time these two mediums end up looking fairly similar. The look people associate with film, at least in photography, is more about making a picture look like underexposed film:
 
-_image here_
+![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Underexposure%20Example.png)
 
 Film does not handle underexposure that well; it clearly distorts colors significantly after just a handful of stops of underexposure. It’s fortunate, though, that a lot of people actually like this distortion, so much so that it’s the look they associate with film. Properly exposed film still has a distinct look, though it’s more subtle and therefore not trivial to discern from a digital photo.
 
 For this project I focused specifically on human faces. While this may seem like an overly specific result, or a cop-out to avoid tackling other categories of photographs (landscapes, architecture), the fact that I achieved good results on human faces is a good indicator that this approach generalizes rather well to other categories. This is due to the fact that digital cameras and (most) film stocks tend to render skin tones just as, if not more, similarly than they render other colors frequently found in the world of photography. In a lot of cases, in fact, it can be quite tricky to tell which is which when presented with a side-by-side comparison.
 
-
+![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Skin%20rendition%20example.png)
 
 It would not be too difficult to translate this method to other types of photography and build a more general tool; it would only involve training models on different subjects with the same approach.
 
