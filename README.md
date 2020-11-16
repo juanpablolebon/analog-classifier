@@ -6,8 +6,8 @@
 - [2. Collecting data](#2-collecting-data)
 - [3. Training and Testing](#3-training-and-testing)
 - [4. A note on adversarial examples](#4-a-note-on-adversarial-examples)
-- [References](#references)
-- [License](#license)
+- [5. References](#references)
+- [6. License](#license)
 
 
 ## Analog Classifier
@@ -74,11 +74,11 @@ Constructing a normal dataframe of grids mapped to rows (as usual), and adding a
 
 In fact, several predictions on digital images saw their confidence _increased_ after FGSM noise was added.
 
-## References
+## 5. References
 
 [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)
 
 
 
-## License
+## 6. License
 [MIT](https://choosealicense.com/licenses/mit/)
