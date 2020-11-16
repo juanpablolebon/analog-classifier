@@ -1,12 +1,18 @@
-# Analog Classifier
+## Table of contents
+
+[1. Background] (## 1. Background)
+
+
+
+## Analog Classifier
 
 A neural network that discerns images taken with an analog camera to images taken with a digital camera
 
-## Background
+## 1. Background
 The “film look” is a term thrown around fairly often by photography and cinema enthusiasts. It is employed as a rejection of the comparatively clean and accurate image rendition of digital cameras, and an embrace of the stylized (and so less accurate) interpretation yielded by film stocks.
 Let’s briefly look at the two major differences between these mediums, to hopefully give some intuition as to why the approach taken later on to train the model was picked and why it worked.
 
-## Micro scale: Film grain vs. Digital noise
+## 1.1 Micro scale: Film grain vs. Digital noise
 
 
 You don’t have to look at an entire image to notice qualities that give away the kind of camera they were taken with; one important difference lies in the texture. Analog cameras capture light that comes in through the lens on film stock, while digital cameras capture it on a digital sensor.
@@ -20,7 +26,7 @@ Digital noise, meanwhile, is the result of electronic circuits injecting unwante
 Film grain is widely accepted to be more desirable than digital noise: it’s smooth and evenly distributed, while digital noise means sharp, pixel-level distortions in the color.
 
 
-## Macro scale: Color rendition
+## 1.2 Macro scale: Color rendition
 
 For all the debate there is about digital vs film, a lot of the time these two mediums end up looking fairly similar. The look people associate with film, at least in photography, is more about making a picture look like underexposed film:
 
@@ -34,7 +40,7 @@ For this project I focused specifically on human faces. While this may seem like
 
 It would not be too difficult to translate this method to other types of photography and build a more general tool; it would only involve training models on different subjects with the same approach.
 
-## Collecting data
+## 2. Collecting data
 
 The dataset involved around 100 portraits taken on each type of camera for a total of slightly over 200. The film portraits were taken from the film photography community on Reddit, [r/analog](https://reddit.com/r/analog). The digital portraits were taken from the [Flickr-Faces-HQ Dataset](https://github.com/NVlabs/ffhq-dataset).
 
@@ -44,13 +50,13 @@ Even after making the decision to train only on faces, a similar logic applied. 
 
 I opted, then, to populate the database with an algorithm I made myself. I wrote an algorithm that scanned images taking NxN grids of pixels and mapping them to one row of 3*[N^2] cells (3 cells for each pixel due to me splitting RGB values into their own cell, instead of keeping each cell as a three-dimensional vector). A value of N=6 worked very well, though it’s possible other values may work even better.
 
-## Training and Testing
+## 3. Training and Testing
 
 Once I had the dataset ready I wrote a sequential model with Keras, using the Adam optimizer and a learning rate of 0.001, both of which worked best out of the options I tried. About 10 epochs were enough for an accuracy above 90%.
 
 Subsequent predictions were done in a slightly manual way: I wrote a function that takes a specified number of NxN grids and maps them to dataframe rows via the same process used when gathering the data, and then makes predictions using Keras for each of these rows. If a given row is predicted to come from a digital image, I increase a “result” variable by one. I decrease this variable by one if this is not the case. Luckily the model is accurate enough that working with a very low number of rows is viable; the amount of times where the majority of rows were predicted inaccurately was very low.
 
-## A note on adversarial examples
+## 4. A note on adversarial examples
 
 Something interesting about this model was that it was seemingly invulnerable to adversarial examples devised via the Fast Gradient Sign Method.
 
