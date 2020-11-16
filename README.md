@@ -22,7 +22,7 @@ Let’s briefly look at the two major differences between these mediums, to hope
 
 ## 1.1 Micro scale: Film grain vs. Digital noise
 
-You don’t have to look at an entire image to notice qualities that give away the kind of camera they were taken with; one important difference lies in the texture. Analog cameras capture light that comes in through the lens on film stock, while digital cameras capture it on a digital sensor.
+You don’t have to look at an entire image to notice qualities that give away the kind of camera they were taken with: one important difference lies in the texture. Analog cameras capture light that comes in through the lens on film stock, while digital cameras capture it on a digital sensor.
 
 Film stocks contain halide crystals which react to light and reduce to metallic silver. These clumps of crystals are what yield the image while the sections of the film stock that do not contain these crystals create the grain. The details of the chemistry behind this process aren’t entirely relevant here, what matters is the fact that film grain is more of an optical illusion than anything else, since it is merely the sections of stock that do not contain reduced silver. These won’t display any color and will therefore be blank. 
 
@@ -38,13 +38,13 @@ For all the debate there is about digital vs film, a lot of the time these two m
 
 ![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Underexposure%20Example.png)
 
-Film does not handle underexposure that well; it clearly distorts colors significantly after just a handful of stops of underexposure. It’s fortunate, though, that a lot of people actually like this distortion, so much so that it’s the look they associate with film. Properly exposed film still has a distinct look, though it’s more subtle and therefore not trivial to discern from a digital photo.
+Film does not handle underexposure that well - it clearly distorts colors significantly after just a handful of stops of underexposure. It’s fortunate, though, that a lot of people actually like this distortion, so much so that it’s the look they associate with film. Properly exposed film still has a distinct look, though it’s more subtle and therefore not trivial to discern from a digital photo.
 
 For this project I focused specifically on human faces. While this may seem like an overly specific result, or a cop-out to avoid tackling other categories of photographs (landscapes, architecture), the fact that I achieved good results on human faces is a good indicator that this approach generalizes rather well to other categories. This is due to the fact that digital cameras and (most) film stocks tend to render skin tones just as, if not more, similarly than they render other colors frequently found in the world of photography. In a lot of cases, in fact, it can be quite tricky to tell which is which when presented with a side-by-side comparison.
 
 ![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Skin%20rendition%20example.png)
 
-It would not be too difficult to translate this method to other types of photography and build a more general tool; it would only involve training models on different subjects with the same approach.
+It would not be too difficult to translate this method to other types of photography and build a more general tool, it would only involve training models on different subjects with the same approach.
 
 ## 2. Collecting data
 
