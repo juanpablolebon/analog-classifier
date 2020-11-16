@@ -62,6 +62,8 @@ Once I had the dataset ready I wrote a sequential model with Keras, using the Ad
 
 Subsequent predictions were done in a slightly manual way: I wrote a function that takes a specified number of NxN grids and maps them to dataframe rows via the same process used when gathering the data, and then makes predictions using Keras for each of these rows. If a given row is predicted to come from a digital image, I increase a “result” variable by one. I decrease this variable by one if this is not the case. Luckily the model is accurate enough that working with a very low number of rows is viable; the amount of times where the majority of rows were predicted inaccurately was very low.
 
+Testing the model on a different batch of 100 faces yielded an accuracy of over 95%, indicating that the model did not overfit.
+
 ## 4. A note on adversarial examples
 
 Something interesting about this model was that it was seemingly invulnerable to adversarial examples devised via the Fast Gradient Sign Method.
