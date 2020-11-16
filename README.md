@@ -1,7 +1,11 @@
 ## Table of contents
 
-[1. Background] (## 1. Background)
-
+[1. Background] (https://github.com/juanpablolebon/analog-classifier/blob/main/README.md#1-background)
+  [1.1 Micro scale: Film grain vs. Digital noise] (https://github.com/juanpablolebon/analog-classifier/blob/main/README.md#11-micro-scale-film-grain-vs-digital-noise)
+  [1.2 Macro scale: Color rendition] (https://github.com/juanpablolebon/analog-classifier/blob/main/README.md#12-macro-scale-color-rendition)
+ [2. Collecting Data] (https://github.com/juanpablolebon/analog-classifier/blob/main/README.md#2-collecting-data)
+ [3. Training and Testing] (https://github.com/juanpablolebon/analog-classifier/blob/main/README.md#3-training-and-testing)
+ [4. A note on adversarial examples] (https://github.com/juanpablolebon/analog-classifier/blob/main/README.md#4-a-note-on-adversarial-examples)
 
 
 ## Analog Classifier
@@ -14,7 +18,6 @@ Let’s briefly look at the two major differences between these mediums, to hope
 
 ## 1.1 Micro scale: Film grain vs. Digital noise
 
-
 You don’t have to look at an entire image to notice qualities that give away the kind of camera they were taken with; one important difference lies in the texture. Analog cameras capture light that comes in through the lens on film stock, while digital cameras capture it on a digital sensor.
 
 Film stocks contain halide crystals which react to light and reduce to metallic silver. These clumps of crystals are what yield the image; while the sections of the film stock that do not contain these crystals create the grain. The details of the chemistry behind this process aren’t entirely relevant here; what matters is the fact that film grain is more of an optical illusion than anything else, since it is merely the sections of stock that do not contain reduced silver. These won’t display any color and will therefore be blank. 
@@ -24,7 +27,6 @@ Digital noise, meanwhile, is the result of electronic circuits injecting unwante
 ![](https://i.stack.imgur.com/e7lqN.png)
 
 Film grain is widely accepted to be more desirable than digital noise: it’s smooth and evenly distributed, while digital noise means sharp, pixel-level distortions in the color.
-
 
 ## 1.2 Macro scale: Color rendition
 
