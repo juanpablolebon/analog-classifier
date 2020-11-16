@@ -24,7 +24,7 @@ Let’s briefly look at the two major differences between these mediums, to hope
 
 You don’t have to look at an entire image to notice qualities that give away the kind of camera they were taken with; one important difference lies in the texture. Analog cameras capture light that comes in through the lens on film stock, while digital cameras capture it on a digital sensor.
 
-Film stocks contain halide crystals which react to light and reduce to metallic silver. These clumps of crystals are what yield the image; while the sections of the film stock that do not contain these crystals create the grain. The details of the chemistry behind this process aren’t entirely relevant here; what matters is the fact that film grain is more of an optical illusion than anything else, since it is merely the sections of stock that do not contain reduced silver. These won’t display any color and will therefore be blank. 
+Film stocks contain halide crystals which react to light and reduce to metallic silver. These clumps of crystals are what yield the image while the sections of the film stock that do not contain these crystals create the grain. The details of the chemistry behind this process aren’t entirely relevant here, what matters is the fact that film grain is more of an optical illusion than anything else, since it is merely the sections of stock that do not contain reduced silver. These won’t display any color and will therefore be blank. 
 
 Digital noise, meanwhile, is the result of electronic circuits injecting unwanted signals into the sensor recording the image. This means that it has a markedly different look to film grain since it is born out of a completely different process. 
 
