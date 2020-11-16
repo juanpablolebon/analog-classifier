@@ -40,7 +40,7 @@ def build_model(cols):
     return new_model
 
 
-record = 0.0845
+record = 0.0545
 
 
 def train(lowest_mse):
