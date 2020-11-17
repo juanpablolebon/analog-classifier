@@ -34,7 +34,7 @@ Film grain is widely accepted to be more desirable than digital noise: it’s sm
 
 ## 1.2 Macro scale: Color rendition
 
-For all the debate there is about digital vs film, a lot of the time these two mediums end up looking fairly similar. The look people associate with film, at least in photography, is more about making a picture look like underexposed film:
+For all the debate there is about digital vs film, a lot of the time these two mediums end up looking fairly similar. The look people associate with film, at least in photography, is more about making a picture look like _underexposed_ film:
 
 ![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Underexposure%20Example.png)
 
@@ -74,7 +74,6 @@ Just for a bit of context, FGSM is a tool used to construct data that a model wi
 
 Constructing a normal dataframe of grids mapped to rows (as usual), and adding a perturbed dataframe created via FGSM with an epsilon of smaller than 1 barely made a dent on the accuracy and confidence of this model. Moreover, ridiculous epsilon values of 1000 were not enough to change the model’s prediction at times. At worst it decreased the model’s confidence in its prediction from, say, 90% to 30%.
 
-In fact, several predictions on digital images saw their confidence _increased_ after FGSM noise was added.
 
 ## 5. References
 
