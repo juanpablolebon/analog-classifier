@@ -8,14 +8,9 @@ import datetime
 from matplotlib import pyplot as plt
 from matplotlib import colors
 import glob
-import requests
 from tqdm import tqdm
-from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin, urlparse
 import os
-import praw
-import urllib.request
-from colorthief import ColorThief
 import keras
 import tensorflow as tf
 from matplotlib.image import imread
@@ -26,9 +21,6 @@ import sklearn
 import openpyxl
 import xlrd
 import time
-import numba
-from numba import jit
-from requests.exceptions import HTTPError
 from tensorflow.python.keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import cvutils
