@@ -17,4 +17,4 @@ combined_rgb_data_dir = r'C:/Users/juanp/Documents/Images/RGBCombFace.csv'
 digital_images_dir = r'C:/Users/juanp/Documents/Images/Faces_Dig'
 film_images_dir = r'C:/Users/juanp/Documents/Images/Faces_Film'
 model_dir = r'C:/Users/juanp/Documents/Images/Model'
-model = keras.models.load_model(r'C:/Users/juanp/Documents/Images/Model')
+model = keras.models.load_model(model_dir)
