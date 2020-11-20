@@ -13,7 +13,7 @@ def fgsm_noise(rgb_data, label):
 
 
 noise = fgsm_noise(rgb_sample, 1).numpy()
-adversarial_example = rgb_sample + noise * 999
+adversarial_example = rgb_sample + noise * 0.1
 perturbed_dataframe = pd.DataFrame(adversarial_example, columns=range(108)).astype(int)
 print("Model prediction with original image: ", predict(rgb_sample.astype(int), model), "\n")
 print("Model prediction with perturbed image: ", predict(perturbed_dataframe, model))
