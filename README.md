@@ -4,10 +4,11 @@
   - [1.1 Micro scale: Film grain vs. Digital noise](#11-micro-scale--film-grain-vs-digital-noise)
   - [1.2 Macro scale: Color rendition](#12-macro-scale--color-rendition)
 - [2. Collecting data](#2-collecting-data)
-- [3. Training and Testing](#3-training-and-testing)
-- [4. A note on adversarial examples](#4-a-note-on-adversarial-examples)
-- [5. References](#references)
-- [6. License](#license)
+- [3. Cleaning the data](#3-cleaning-the-data
+- [4. Training and Testing](#3-training-and-testing)
+- [5. A note on adversarial examples](#4-a-note-on-adversarial-examples)
+- [6. References](#references)
+- [7. License](#license)
 
 
 ## Analog Classifier
@@ -62,7 +63,7 @@ Initially, I was using PRAW to scrape images from [r/analog](https://reddit.com/
 
 Cleaning data after I made the move to strictly working with faces involved removing duplicate rows and rows with null values. I considered removing rows with a higher standard deviation than a given threshold, reasoning that I didn't want samples containing wildly different ranges of colors to be used. Eventually I decided to keep these on the presumption that the way the two mediums rendered sharp contrasts in color was informative.
 
-## 3. Training and Testing
+## 4. Training and Testing
 
 Once I had the dataset ready I wrote a sequential model with Keras, using the Adam optimizer and a learning rate of 0.001, both of which worked best out of the options I tried. About 10 epochs were enough for an accuracy above 90%.
 
@@ -70,7 +71,7 @@ Subsequent predictions were done in a slightly manual way: I wrote a function th
 
 Testing the model on a different batch of 100 faces yielded an accuracy of over 95%, indicating that the model did not overfit.
 
-## 4. A note on adversarial examples
+## 5. A note on adversarial examples
 
 Something interesting about this model was that it was seemingly invulnerable to adversarial examples devised via the Fast Gradient Sign Method.
 
@@ -81,11 +82,11 @@ Just for a bit of context, FGSM is a tool used to construct data that a model wi
 Constructing a normal dataframe of grids mapped to rows (as usual), and adding a perturbed dataframe created via FGSM with an epsilon of smaller than 1 barely made a dent on the accuracy and confidence of this model. Moreover, ridiculous epsilon values of 1000 were not enough to change the model’s prediction at times. At worst it decreased the model’s confidence in its prediction from, say, 90% to 30%.
 
 
-## 5. References
+## 6. References
 
 [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)
 
 
 
-## 6. License
+## 7. License
 [MIT](https://choosealicense.com/licenses/mit/)
