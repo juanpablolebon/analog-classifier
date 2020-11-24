@@ -4,7 +4,7 @@
   - [1.1 Micro scale: Film grain vs. Digital noise](#11-micro-scale--film-grain-vs-digital-noise)
   - [1.2 Macro scale: Color rendition](#12-macro-scale--color-rendition)
 - [2. Collecting data](#2-collecting-data)
-- [3. Cleaning the data](#3-cleaning-the-data
+- [3. Cleaning the data](https://github.com/juanpablolebon/analog-classifier/blob/main/README.md#3-cleaning-the-data)
 - [4. Training and Testing](#3-training-and-testing)
 - [5. A note on adversarial examples](#4-a-note-on-adversarial-examples)
 - [6. References](#references)
