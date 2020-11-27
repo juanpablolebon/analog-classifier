@@ -10,12 +10,9 @@ def combine_csv():
     comb.to_csv(combined_rgb_data_dir, index=False)
 
 
-def convolve(scrape_, is_dig, grid_size):
-    if scrape_:
-        if is_dig:
-            scrape(0, 0, grid_size, 0.05)
-        else:
-            scrape(0, 1, grid_size, 0.05)
+def convolve(need_to_scrape, is_dig, grid_size):
+    if need_to_scrape:
+        scrape(0, is_dig, grid_size, 0.05)
     combine_csv()
     return 1
 
