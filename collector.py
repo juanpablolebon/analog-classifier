@@ -20,12 +20,12 @@ def sample(file, grid_size, stride):
     start_time = time.time()
     stride_row = (stride / 100) * wid / overlap
     stride_col = (stride / 100) * height / overlap
-    possible_samples_per_row = floor(wid * overlap / (grid_size + stride_row))
-    possible_samples_per_col = floor(height * overlap / (grid_size + stride_col))
+    possible_samples_per_row = wid * overlap // (grid_size + stride_row))
+    possible_samples_per_col = height * overlap // (grid_size + stride_col))
 
     for rows_done in tqdm(range(possible_samples_per_col)):
         col = 0
-        progress = floor((rows_done / possible_samples_per_col) * 100)
+        progress = (rows_done // possible_samples_per_col) * 100
         # Write checkpoints every time progress increases by 5%, except at 100% where it would be unnecessary
         # avoids accessing large dataframe indexes to greatly boost efficiency
         if progress % 5 == 0 and progress != 100:
@@ -50,9 +50,9 @@ def sample(file, grid_size, stride):
                         valid = 1
                     for splitter in range(3):  # maps rgb values to separate cells
                         samples.loc[k, L + splitter] = img[col + m][row + n][splitter]
-                    L = L + 3
+                    L += 3
             if L > 0:
-                k = k + 1
+                k +=1
                 count += 1
             col = int(col + grid_size + stride_col)
         row = int(row + grid_size + stride_row)
@@ -73,8 +73,8 @@ def crop_center(img, cropx, cropy):
     return img[starty:starty + cropy, startx:startx + cropx]
 
 
-def scrape(new, is_dig, grid_size, stride):
-    if new:
+def scrape(create_new, is_dig, grid_size, stride):
+    if create_new:
         frame = pd.DataFrame(columns=(range(int((grid_size ** 2) * 3))))
         if is_dig:
             frame.to_csv(digital_rgb_data_dir)
@@ -84,11 +84,9 @@ def scrape(new, is_dig, grid_size, stride):
             img_dir = film_images_dir
     else:
         if is_dig:
-            # subr = subredditD.top("month", limit=10000)
             frame = pd.read_csv(digital_rgb_data_dir)
             img_dir = digital_images_dir
         else:
-            # subr = subredditA.new(limit=10000)
             frame = pd.read_csv(film_rgb_data_dir)
             img_dir = film_images_dir
 
@@ -109,7 +107,7 @@ def scrape(new, is_dig, grid_size, stride):
                 frame.to_csv(digital_rgb_data_dir, index=False)
             else:
                 frame.to_csv(film_rgb_data_dir, index=False)
-        count = count + 1
+        count += 1
     frame = frame.dropna().drop_duplicates(subset=None, keep='first', inplace=False).astype(int).reset_index(drop=True)
     if is_dig:
         frame.to_csv(digital_rgb_data_dir, index=False)
