@@ -27,7 +27,7 @@ def sample(file, grid_size, stride):
         col = 0
         progress = (rows_done // possible_samples_per_col) * 100
         # Write checkpoints every time progress increases by 5%, except at 100% where it would be unnecessary
-        # avoids accessing large dataframe indexes to greatly boost efficiency
+        # avoids working with large dataframe
         if progress % 5 == 0 and progress != 100:
             k = 0
             samples_aux = pd.concat([samples_aux, samples], ignore_index=True)
