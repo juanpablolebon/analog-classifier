@@ -25,7 +25,7 @@ Let’s briefly look at the two major differences between these mediums, to hope
 
 You don’t have to look at an entire image to notice qualities that give away the kind of camera they were taken with: one important difference lies in the texture. Analog cameras capture light that comes in through the lens on film stock, while digital cameras capture it on a digital sensor.
 
-Film stocks contain halide crystals which react to light and reduce to metallic silver. These clumps of crystals are what yield the image while the sections of the film stock that do not contain these crystals create the grain. The details of the chemistry behind this process aren’t entirely relevant here, what matters is the fact that film grain is more of an optical illusion than anything else, since it is merely the sections of stock that do not contain reduced silver. These won’t display any color and will therefore be blank. 
+Film stocks contain halide crystals which react to light and reduce to metallic silver. These clumps of crystals are what yield the image while the sections of the film stock that do not contain these crystals create the grain. The details of the chemistry behind this process aren’t entirely relevant here, what matters is the fact that film grain is more of an optical illusion than anything else, since it is merely the sections of stock that do not contain clumps of reduced silver. These sections end up being completely transparent.
 
 Digital noise, meanwhile, is the result of electronic circuits injecting unwanted signals into the sensor recording the image. This means that it has a markedly different look to film grain since it is born out of a completely different process. 
 
@@ -35,7 +35,7 @@ Film grain is widely accepted to be more desirable than digital noise: it’s sm
 
 ## 1.2 Macro scale: Color rendition
 
-For all the debate there is about digital vs film, a lot of the time these two mediums end up looking fairly similar. The look people associate with film, at least in photography, is more about making a picture look like _underexposed_ film:
+For all the debate there is about digital vs film, a lot of the time these two mediums end up looking fairly similar. The look that people unfamiliar with these mediums associate with film, at least in photography, is more closely related to pictures that look like _underexposed_ film:
 
 ![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Underexposure%20Example.png)
 
