@@ -57,7 +57,7 @@ Even after making the decision to train only on faces, a similar logic applied. 
 
 I opted, then, to populate the database with an algorithm I made myself. I wrote an algorithm that scanned images taking NxN grids of pixels and mapping them to one row of 3*[N^2] cells (3 cells for each pixel due to me splitting RGB values into their own cell, instead of keeping each cell as a three-dimensional vector). Color extraction was done using Matplotlib.  A value of N=6 worked very well, though it’s possible other values may work even better.
 
-## 3 Cleaning the data
+## 3. Cleaning the data
 
 Initially, I was using PRAW to scrape images from [r/analog](https://reddit.com/r/analog) automatically. An issue that arose exclusively with film images was the presence of black/white "borders" used for aesthetic purposes. I obviously didn't want to tell to associate these with film, so I needed a way to ignore them when collecting samples. Similarly, I needed a way to filter out black and white images because they would obviously not be useful either. I decided, then, to create an array that contained HSL values for an image instead of RGB values. This was an extremely useful choice because it made checking a pixel's saturation and luminance values trivial. Pixels with extremely low or extremely high luminance were ignored, and the algorithm didn't add the samples it took from an image to the final dataframe if it didn't find pixels that were significantly saturated.
 
