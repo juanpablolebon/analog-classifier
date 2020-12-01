@@ -13,7 +13,7 @@
 
 ## Analog Classifier
 
-![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Yosemite.png)
+![](https://github.com/juanpablolebon/analog-classifier/blob/main/Example%20Images/Woman%20Side%20by%20Side.png)
 
 A neural network that discerns images taken with an analog camera from images taken with a digital camera
 
