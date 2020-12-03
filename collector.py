@@ -41,8 +41,6 @@ def sample(file, grid_size, stride):
             L = 0
             for n in range(grid_size):
                 for m in range(grid_size):
-                    if col + m >= height or row + n >= wid:
-                        break
                     pixel = hsl[col + m][row + n]
                     # pixel[1] stores a given pixel's saturation on a scale of 0 to 1. This check simply makes sure
                     # that the image is not black and white
